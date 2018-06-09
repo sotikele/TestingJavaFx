@@ -64,8 +64,8 @@ public class HashTable {
        return 0;
     }
 
-
-    public String findKey(String key) {
+ //return strings not int
+    public int findKey(String key) {
 
         // Find the keys original hash key
 
@@ -75,7 +75,7 @@ public class HashTable {
 
 
 
-            if (theArray[arrayIndexHash] == key) {
+            if (theArray[arrayIndexHash].equals(key) ) {
 
 
 
@@ -85,7 +85,7 @@ public class HashTable {
 
                         + arrayIndexHash);
 
-                return theArray[arrayIndexHash];
+                return arrayIndexHash;
 
             }
 
@@ -101,7 +101,7 @@ public class HashTable {
 
         // Couldn't locate the key
 
-        return null;
+        return -1;
 
     }
 

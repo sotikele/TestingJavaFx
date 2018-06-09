@@ -1,27 +1,29 @@
 package sample;
 
 
+
 import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 
 public class Controller implements Initializable {
 
  private HashTable table;
  @FXML
- private TextField input;
+ public TextField insertValue,findValue,DeleteValue;
  @FXML
   private List<Label> labelList;
  @FXML
  private Label label1,label2,label3,label4,label5,label6,label7,label8,label9,label10,label11,label12,label13,label14,label15;
+
 
 
 
@@ -47,15 +49,29 @@ public class Controller implements Initializable {
 
     }
 
-    public void checkEvents(ActionEvent event){
+    public void insertValues(ActionEvent event){
 
-       String inputValue = input.getText();
-        String[] elementsToAdd = {inputValue};
+       String insertValue = this.insertValue.getText();
+        String[] elementsToAdd = {insertValue};
         int hashIndex=table.hashFunction2(elementsToAdd,table.getTheArray());
-        labelList.get(hashIndex).setText(inputValue);
+        labelList.get(hashIndex).setText(insertValue);
+
+
+    }
+
+    public void findValues(ActionEvent event){
+
+        String findValue = this.findValue.getText();
+        int index = table.findKey(findValue);
+
+        labelList.get(index).setStyle("-fx-background-color: orange;");
+
+        }
+
+
+
 
 
     }
 
 
-}
