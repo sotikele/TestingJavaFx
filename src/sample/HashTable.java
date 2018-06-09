@@ -38,7 +38,7 @@ public class HashTable {
 
             // the modulus
 
-            int arrayIndex = Integer.parseInt(newElementVal) % 19;
+            int arrayIndex = Integer.parseInt(newElementVal) % 15;
 
             System.out.println("Modulus Index= " + arrayIndex + " for value "
 
@@ -59,7 +59,7 @@ public class HashTable {
             }
 
             theArray[arrayIndex] = newElementVal;
-            return arrayIndex;
+            return arrayIndex ;
         }
        return 0;
     }
@@ -69,7 +69,7 @@ public class HashTable {
 
         // Find the keys original hash key
 
-        int arrayIndexHash = Integer.parseInt(key) % 19;
+        int arrayIndexHash = Integer.parseInt(key) % 15;
 
         while (theArray[arrayIndexHash] != "-1") {
 
