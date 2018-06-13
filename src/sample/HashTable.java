@@ -106,7 +106,11 @@ public class HashTable {
     }
 
 
-
+    public int  deleteValue(String key){
+        int deletedValueIndex= this.findKey(key);
+        this.theArray[deletedValueIndex]= "-1";
+       return  deletedValueIndex;
+    }
 
 
 
@@ -116,18 +120,3 @@ public class HashTable {
 
 
 
-/*  HashTable theHash=new HashTable(30);
-        //String[] elementsToAdd = {"1","5","17","21","26"};
-        // theHash.hashFunction1(elementsToAdd,theHash.theArray);
-        // theHash.displayTheStack();
-        String[] elementsToAdd2 = { "100", "510", "170", "214", "268", "398",
-
-                "235", "802", "900", "723", "699", "1", "16", "999", "890",
-
-                "725", "998", "978", "988", "990", "989", "984", "320", "321",
-
-                "400", "415", "450", "50", "660", "624" };
-        theHash.hashFunction2(elementsToAdd2,theHash.theArray);
-        theHash.displayTheStack();
-
-        theHash.findKey("989");*/

@@ -18,7 +18,7 @@ public class Controller implements Initializable {
 
  private HashTable table;
  @FXML
- public TextField insertValue,findValue,DeleteValue;
+ private TextField insertValue,findValue,deleteValue;
  @FXML
   private List<Label> labelList;
  @FXML
@@ -68,7 +68,14 @@ public class Controller implements Initializable {
 
         }
 
+    public void deleteValues(ActionEvent event){
 
+        String deletedValue = this.deleteValue.getText();
+        int index = table.deleteValue(deletedValue);
+        labelList.get(index).setText(" ");
+
+
+    }
 
 
 
