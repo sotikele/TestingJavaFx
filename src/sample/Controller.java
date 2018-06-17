@@ -6,9 +6,12 @@ import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 
 
 import java.net.URL;
@@ -20,10 +23,14 @@ public class Controller implements Initializable {
  private HashTable table;
  @FXML
  private TextField insertValue,findValue,deleteValue;
+
  @FXML
-  private List<Label> labelList;
- @FXML
- private Label label1,label2,label3,label4,label5,label6,label7,label8,label9,label10,label11,label12,label13,label14,label15;
+ private List<Text> textList;
+
+
+  @FXML
+  private Pane pane;
+
 
 
 
@@ -32,22 +39,17 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         table=new HashTable(15);
-        labelList=new ArrayList<>(15);
-        labelList.add(label1);
-        labelList.add(label2);
-        labelList.add(label3);
-        labelList.add(label4);
-        labelList.add(label5);
-        labelList.add(label6);
-        labelList.add(label7);
-        labelList.add(label8);
-        labelList.add(label9);
-        labelList.add(label10);
-        labelList.add(label11);
-        labelList.add(label12);
-        labelList.add(label13);
-        labelList.add(label14);
-        labelList.add(label15);
+        textList=new ArrayList<>(15);
+
+        int squareLayoutX=0, squareLayoutY=250;
+
+        for (int i=0; i<15;i++){
+
+
+            this.createSquare(squareLayoutX,squareLayoutY);
+            squareLayoutX += 50;
+        }
+
 
 
     }
@@ -57,7 +59,8 @@ public class Controller implements Initializable {
        String insertValue = this.insertValue.getText();
 
         int hashIndex=table.hashFunction(insertValue,table.getTheArray());
-        labelList.get(hashIndex).setText(insertValue);
+        textList.get(hashIndex).setText(insertValue);
+
 
 
     }
@@ -66,8 +69,8 @@ public class Controller implements Initializable {
 
         String findValue = this.findValue.getText();
         int index = table.findKey(findValue);
-
-        labelList.get(index).setStyle("-fx-background-color: orange;");
+       //maybe i have to change the color of rectangle
+        textList.get(index).setFill(Color.RED);
 
 
 
@@ -77,13 +80,29 @@ public class Controller implements Initializable {
 
         String deletedValue = this.deleteValue.getText();
         int index = table.deleteValue(deletedValue);
-        labelList.get(index).setText(" ");
-        labelList.get(index).setStyle("-fx-background-color: #F5F5F5;");
+        textList.get(index).setText(" ");
+        textList.get(index).setFill(Color.BLACK);
 
 
     }
 
 
+
+    public void createSquare(int layoutX,int layoutY){
+        Rectangle agent=new Rectangle(50,50);
+        agent.setFill(Color.GRAY);
+        agent.setStroke(Color.BLACK);
+        Text text = new Text(" ");
+        text.setFill(Color.WHITE);
+        StackPane stack = new StackPane();
+        stack.getChildren().addAll(agent, text);
+        stack.setLayoutX(layoutX);
+        stack.setLayoutY(layoutY);
+        this.pane.getChildren().add(stack);
+        textList.add(text);
+
+
+    }
 
     }
 
