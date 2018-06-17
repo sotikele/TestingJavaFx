@@ -8,11 +8,11 @@ public class HashTable {
 
    private String[] theArray;
     private  int arraySize;
-    private int itemsInArray;
+
 
 
    public HashTable(int size) {
-        arraySize = size;
+        arraySize = size; //size should be prime number to avoid collisions
         theArray = new String[size];
         Arrays.fill(theArray, "-1");
 
@@ -25,24 +25,17 @@ public class HashTable {
 
 
 
-    public int hashFunction2(String[] stringsForArray, String[] theArray) {
+    public int hashFunction(String stringForArray, String[] theArray) {
 
 
-        for (int n = 0; n < stringsForArray.length; n++) {
 
 
-            String newElementVal = stringsForArray[n];
 
-
-            // Create an index to store the value in by taking
-
-            // the modulus
-
-            int arrayIndex = Integer.parseInt(newElementVal) % 15;
+            int arrayIndex = Integer.parseInt(stringForArray) % 15;
 
             System.out.println("Modulus Index= " + arrayIndex + " for value "
 
-                    + newElementVal);
+                    + stringForArray);
 
             // Cycle through the array until we find an empty space
 
@@ -58,11 +51,11 @@ public class HashTable {
 
             }
 
-            theArray[arrayIndex] = newElementVal;
+            theArray[arrayIndex] = stringForArray;
             return arrayIndex ;
         }
-       return 0;
-    }
+
+
 
  //return strings not int
     public int findKey(String key) {

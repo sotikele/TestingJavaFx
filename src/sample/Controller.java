@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 
+
 import java.net.URL;
 import java.util.*;
 
@@ -23,6 +24,7 @@ public class Controller implements Initializable {
   private List<Label> labelList;
  @FXML
  private Label label1,label2,label3,label4,label5,label6,label7,label8,label9,label10,label11,label12,label13,label14,label15;
+
 
 
 
@@ -47,13 +49,14 @@ public class Controller implements Initializable {
         labelList.add(label14);
         labelList.add(label15);
 
+
     }
 
     public void insertValues(ActionEvent event){
 
        String insertValue = this.insertValue.getText();
-        String[] elementsToAdd = {insertValue};
-        int hashIndex=table.hashFunction2(elementsToAdd,table.getTheArray());
+
+        int hashIndex=table.hashFunction(insertValue,table.getTheArray());
         labelList.get(hashIndex).setText(insertValue);
 
 
@@ -66,6 +69,8 @@ public class Controller implements Initializable {
 
         labelList.get(index).setStyle("-fx-background-color: orange;");
 
+
+
         }
 
     public void deleteValues(ActionEvent event){
@@ -73,6 +78,7 @@ public class Controller implements Initializable {
         String deletedValue = this.deleteValue.getText();
         int index = table.deleteValue(deletedValue);
         labelList.get(index).setText(" ");
+        labelList.get(index).setStyle("-fx-background-color: #F5F5F5;");
 
 
     }
