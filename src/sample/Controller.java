@@ -13,7 +13,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
-
 import java.net.URL;
 import java.util.*;
 
@@ -22,7 +21,7 @@ public class Controller implements Initializable {
 
  private HashTable table;
  @FXML
- private TextField insertValue,findValue,deleteValue;
+ private TextField insertKey,insertValue,findValue,deleteValue;
 
  @FXML
  private List<Text> textList;
@@ -30,6 +29,8 @@ public class Controller implements Initializable {
 
   @FXML
   private Pane pane;
+
+
 
 
 
@@ -48,6 +49,8 @@ public class Controller implements Initializable {
 
             this.createSquare(squareLayoutX,squareLayoutY);
             squareLayoutX += 50;
+
+
         }
 
 
@@ -57,9 +60,11 @@ public class Controller implements Initializable {
     public void insertValues(ActionEvent event){
 
        String insertValue = this.insertValue.getText();
+        String insertKey = this.insertKey.getText();
 
-        int hashIndex=table.hashFunction(insertValue,table.getTheArray());
-        textList.get(hashIndex).setText(insertValue);
+        int hashIndex=table.hashFunction(insertKey,table.getTheArray(),insertValue);
+        textList.get(hashIndex).setText(insertKey+"\n"+insertValue);
+
 
 
 
@@ -68,7 +73,7 @@ public class Controller implements Initializable {
     public void findValues(ActionEvent event){
 
         String findValue = this.findValue.getText();
-        int index = table.findKey(findValue);
+        int index = table.findValue(findValue);
        //maybe i have to change the color of rectangle
         textList.get(index).setFill(Color.RED);
 
@@ -94,6 +99,7 @@ public class Controller implements Initializable {
         agent.setStroke(Color.BLACK);
         Text text = new Text(" ");
         text.setFill(Color.WHITE);
+        text.setStyle("-fx-font-size: 14");
         StackPane stack = new StackPane();
         stack.getChildren().addAll(agent, text);
         stack.setLayoutX(layoutX);
@@ -103,6 +109,9 @@ public class Controller implements Initializable {
 
 
     }
+
+
+
 
     }
 

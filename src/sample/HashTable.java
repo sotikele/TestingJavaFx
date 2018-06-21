@@ -6,40 +6,44 @@ import java.util.Arrays;
 
 public class HashTable {
 
-   private String[] theArray;
     private  int arraySize;
+    private Pair[] map=null;
 
 
 
    public HashTable(int size) {
         arraySize = size; //size should be prime number to avoid collisions
-        theArray = new String[size];
-        Arrays.fill(theArray, "-1");
+        map = new Pair[size];
+        Arrays.fill(map, null);
 
     }
 
-    public String[] getTheArray() {
-        return theArray;
+    public Pair[] getTheArray() {
+        return map;
     }
 
 
 
 
-    public int hashFunction(String stringForArray, String[] theArray) {
+    public int hashFunction(String key, Pair[] map,String value) {
 
+               int asciiNumbers=0;
 
+               for (int i=0;i<key.length();i++){
 
-
-
-            int arrayIndex = Integer.parseInt(stringForArray) % 15;
+                   asciiNumbers+=(int) key.charAt(i);
+                   System.out.println("ASCII value of : "+ key.charAt(i) + "    is :"+(int) key.charAt(i));
+               }
+           //TODO better hashing
+            int arrayIndex = asciiNumbers % 15;
 
             System.out.println("Modulus Index= " + arrayIndex + " for value "
 
-                    + stringForArray);
+                    + key);
 
             // Cycle through the array until we find an empty space
 
-            while (theArray[arrayIndex] != "-1") {
+            while (map[arrayIndex] != null) {
 
                 ++arrayIndex;
 
@@ -51,24 +55,31 @@ public class HashTable {
 
             }
 
-            theArray[arrayIndex] = stringForArray;
+            map[arrayIndex] = new Pair(key,value);
             return arrayIndex ;
         }
 
 
 
- //return strings not int
-    public int findKey(String key) {
+
+   //returns the index of input value
+    public int findValue(String key) {
 
         // Find the keys original hash key
+        int asciiNumbers=0;
 
-        int arrayIndexHash = Integer.parseInt(key) % 15;
+        for (int i=0;i<key.length();i++){
 
-        while (theArray[arrayIndexHash] != "-1") {
+            asciiNumbers+=(int) key.charAt(i);
+        }
+
+        int arrayIndexHash = asciiNumbers % 15;
+
+        while (map[arrayIndexHash] != null) {
 
 
 
-            if (theArray[arrayIndexHash].equals(key) ) {
+            if (map[arrayIndexHash].getKey().equals(key) ) {
 
 
 
@@ -100,8 +111,8 @@ public class HashTable {
 
 
     public int  deleteValue(String key){
-        int deletedValueIndex= this.findKey(key);
-        this.theArray[deletedValueIndex]= "-1";
+        int deletedValueIndex= this.findValue(key);
+        this.map[deletedValueIndex]= null;
        return  deletedValueIndex;
     }
 
@@ -109,7 +120,5 @@ public class HashTable {
 
 
 }
-
-
 
 
