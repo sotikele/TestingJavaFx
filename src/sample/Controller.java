@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -61,12 +62,35 @@ public class Controller implements Initializable {
 
        String insertValue = this.insertValue.getText();
         String insertKey = this.insertKey.getText();
+       if(insertValue.equals("")&&insertKey.equals("")){
+           Alert alert =new Alert(Alert.AlertType.INFORMATION);
+           alert.setHeaderText("you did not give a value and a key");
+           alert.show();
 
-        int hashIndex=table.hashFunction(insertKey);
+       }
+       else if(insertValue.equals(""))
+        {
+            Alert alert =new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("you did not give a value");
+            alert.show();
 
-        table.put(insertKey,insertValue);
+        }
+        else if(insertKey.equals("")){
+           Alert alert =new Alert(Alert.AlertType.INFORMATION);
+           alert.setHeaderText("you did not give  a key");
+           alert.show();
 
-        textList.get(hashIndex).setText(insertKey+"\n"+insertValue);
+       }
+
+       else{
+           int hashIndex=table.hashFunction(insertKey);
+
+           table.put(insertKey,insertValue);
+
+           textList.get(hashIndex).setText(insertKey+"\n"+insertValue);
+       }
+
+
 
 
 
@@ -75,22 +99,40 @@ public class Controller implements Initializable {
 
     public void findValues(ActionEvent event){
 
-        String findValue = this.findValue.getText();
-        int index = table.findValue(findValue);
-       //maybe i have to change the color of rectangle
-        textList.get(index).setFill(Color.RED);
+        String key = this.findValue.getText();
 
+
+         if(key.equals("")||table.findValue(key)==-1){
+            Alert alert =new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("you did not give  a key"+"\n"+"or"+"\n"+"this key does not exist");
+            alert.show();
+
+        }
+
+        else{
+             int index = table.findValue(key);
+             textList.get(index).setFill(Color.RED);
+        }
 
 
         }
 
     public void deleteValues(ActionEvent event){
 
-        String deletedValue = this.deleteValue.getText();
-        int index = table.deleteValue(deletedValue);
-        textList.get(index).setText(" ");
-        textList.get(index).setFill(Color.WHITE);
+        String key = this.deleteValue.getText();
+         int deletedIndex =table.deleteValue(key);
 
+        if(key.equals("")||deletedIndex==-1){
+            Alert alert =new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText("you did not give  a key"+"\n"+"or"+"\n"+"this key does not exist");
+            alert.show();
+
+        }
+        else{
+
+            textList.get(deletedIndex).setText("");
+            textList.get(deletedIndex).setFill(Color.WHITE);
+        }
 
     }
 

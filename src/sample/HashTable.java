@@ -32,11 +32,23 @@ public class HashTable {
                for (int i=0;i<key.length();i++){
 
                    asciiNumbers+=(int) key.charAt(i);
-                   System.out.println("ASCII value of : "+ key.charAt(i) + "    is :"+(int) key.charAt(i));
+
                }
            //TODO better hashing
             int arrayIndex = asciiNumbers % 15;
 
+        // Cycle through the array until we find an empty space
+        while (this.map[arrayIndex] != null) {
+
+            ++arrayIndex;
+
+          //  System.out.println("Collision Try " + arrayIndex + " Instead");
+
+            // If we get to the end of the array go back to index 0
+
+            arrayIndex %= arraySize;
+
+        }
 
 
             return arrayIndex ;
@@ -47,23 +59,8 @@ public class HashTable {
 
       int arrayIndex = this.hashFunction(key) ;
 
-      System.out.println("Modulus Index= " + arrayIndex + " for value "
+     // System.out.println("Modulus Index= " + arrayIndex + " for value " + key);
 
-              + key);
-
-      // Cycle through the array until we find an empty space
-
-      while (this.map[arrayIndex] != null) {
-
-          ++arrayIndex;
-
-          System.out.println("Collision Try " + arrayIndex + " Instead");
-
-          // If we get to the end of the array go back to index 0
-
-          arrayIndex %= arraySize;
-
-      }
 
       this.map[arrayIndex] = new Pair(key,value);
 
@@ -122,8 +119,12 @@ public class HashTable {
 
     public int  deleteValue(String key){
         int deletedValueIndex= this.findValue(key);
-        this.map[deletedValueIndex]= null;
-       return  deletedValueIndex;
+        if(deletedValueIndex!=-1){
+            this.map[deletedValueIndex]= null;
+            return  deletedValueIndex;
+        }
+        return deletedValueIndex ;
+
     }
 
 
