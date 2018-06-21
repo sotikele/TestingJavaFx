@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sample/LinearProbing.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/HashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/HashTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/sample.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/HashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/sample.fxml" beforeDir="false" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,20 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="101" column="43" lean-forward="true" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashTable.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HashTable.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/HashTable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+            <state relative-caret-position="187">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
@@ -109,17 +91,11 @@
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
-      <file leaf-file-name="Pair.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Pair.java">
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-              <folding>
-                <element signature="e#186#187#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#240#241#0" expanded="true" />
-                <element signature="e#268#269#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="187">
+              <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -147,10 +123,10 @@
         <option value="$PROJECT_DIR$/src/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/sample/LinearProbing.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
         <option value="$PROJECT_DIR$/src/Pair.java" />
         <option value="$PROJECT_DIR$/src/sample/Pair.java" />
         <option value="$PROJECT_DIR$/src/sample/HashTable.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controller.java" />
       </list>
     </option>
   </component>
@@ -341,7 +317,7 @@
       <workItem from="1529499122800" duration="2428000" />
       <workItem from="1529502073080" duration="4974000" />
       <workItem from="1529514519115" duration="7025000" />
-      <workItem from="1529574862072" duration="1998000" />
+      <workItem from="1529574862072" duration="2804000" />
     </task>
     <task id="LOCAL-00001" summary="design test">
       <created>1527515150628</created>
@@ -392,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529265205418</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="now input is string not integer,new class (Pair)">
+      <created>1529577039051</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1529577039051</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61948000" />
+    <option name="totallyTimeSpent" value="62754000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,7 +404,7 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32938644" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4467169" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4467169" />
       <window_info anchor="bottom" id="Terminal" order="14" weight="0.3315393" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="2" />
@@ -497,7 +480,8 @@
     <MESSAGE value="delete function" />
     <MESSAGE value="refactor" />
     <MESSAGE value="better implementation controller class" />
-    <option name="LAST_COMMIT_MESSAGE" value="better implementation controller class" />
+    <MESSAGE value="now input is string not integer,new class (Pair)" />
+    <option name="LAST_COMMIT_MESSAGE" value="now input is string not integer,new class (Pair)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -834,6 +818,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <marker date="1529515547744" expanded="true" signature="378:512" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Pair.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -847,20 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/HashTable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="49" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="49" />
-          <folding>
-            <marker date="1529515547744" expanded="true" signature="378:512" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="101" column="43" lean-forward="true" selection-start-line="101" selection-start-column="43" selection-end-line="101" selection-end-column="43" />
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
@@ -868,10 +852,10 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/HashTable.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
+        <state relative-caret-position="187">
+          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="8" />
         </state>
       </provider>
     </entry>

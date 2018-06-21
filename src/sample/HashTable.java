@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class HashTable {
 
     private  int arraySize;
-    private Pair[] map=null;
+    private Pair[] map;
 
 
 
@@ -25,7 +25,7 @@ public class HashTable {
 
 
 
-    public int hashFunction(String key, Pair[] map,String value) {
+    public int hashFunction(String key) {
 
                int asciiNumbers=0;
 
@@ -37,29 +37,39 @@ public class HashTable {
            //TODO better hashing
             int arrayIndex = asciiNumbers % 15;
 
-            System.out.println("Modulus Index= " + arrayIndex + " for value "
 
-                    + key);
 
-            // Cycle through the array until we find an empty space
-
-            while (map[arrayIndex] != null) {
-
-                ++arrayIndex;
-
-                System.out.println("Collision Try " + arrayIndex + " Instead");
-
-                // If we get to the end of the array go back to index 0
-
-                arrayIndex %= arraySize;
-
-            }
-
-            map[arrayIndex] = new Pair(key,value);
             return arrayIndex ;
         }
 
+  public void put(String key,String value){
 
+
+      int arrayIndex = this.hashFunction(key) ;
+
+      System.out.println("Modulus Index= " + arrayIndex + " for value "
+
+              + key);
+
+      // Cycle through the array until we find an empty space
+
+      while (this.map[arrayIndex] != null) {
+
+          ++arrayIndex;
+
+          System.out.println("Collision Try " + arrayIndex + " Instead");
+
+          // If we get to the end of the array go back to index 0
+
+          arrayIndex %= arraySize;
+
+      }
+
+      this.map[arrayIndex] = new Pair(key,value);
+
+
+
+  }
 
 
    //returns the index of input value

@@ -62,7 +62,10 @@ public class Controller implements Initializable {
        String insertValue = this.insertValue.getText();
         String insertKey = this.insertKey.getText();
 
-        int hashIndex=table.hashFunction(insertKey,table.getTheArray(),insertValue);
+        int hashIndex=table.hashFunction(insertKey);
+
+        table.put(insertKey,insertValue);
+
         textList.get(hashIndex).setText(insertKey+"\n"+insertValue);
 
 
@@ -86,7 +89,7 @@ public class Controller implements Initializable {
         String deletedValue = this.deleteValue.getText();
         int index = table.deleteValue(deletedValue);
         textList.get(index).setText(" ");
-        textList.get(index).setFill(Color.BLACK);
+        textList.get(index).setFill(Color.WHITE);
 
 
     }
