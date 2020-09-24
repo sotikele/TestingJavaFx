@@ -9,8 +9,6 @@ public class HashTable {
     private  int arraySize;
     private Pair[] map;
 
-
-
    public HashTable(int size) {
         arraySize = size; //size should be prime number to avoid collisions
         map = new Pair[size];
@@ -23,33 +21,27 @@ public class HashTable {
     }
 
 
-
-
     public int hashFunction(String key) {
 
-               int asciiNumbers=0;
+               int asciiNumber=0;
 
                for (int i=0;i<key.length();i++){
 
-                   asciiNumbers+=(int) key.charAt(i);
+                   asciiNumber+=(int) key.charAt(i);
 
                }
-           //TODO better hashing
-            int arrayIndex = asciiNumbers % 15;
+            int arrayIndex = asciiNumber % 15;
 
-        // Cycle through the array until we find an empty space
+        // Cycle through the array until you find an empty space
         while (this.map[arrayIndex] != null) {
 
             ++arrayIndex;
 
-          //  System.out.println("Collision Try " + arrayIndex + " Instead");
-
-            // If we get to the end of the array go back to index 0
+            // If you go to the end of the array go back to index 0
 
             arrayIndex %= arraySize;
 
         }
-
 
             return arrayIndex ;
         }
@@ -68,9 +60,32 @@ public class HashTable {
 
   }
 
+    public boolean hasKey(String key){
+
+         for (Pair pair : map) {
+             if(pair != null) {
+                 if (pair.getKey().equals(key)) {
+                     return true;
+                 }
+             }
+         }
+        return false;
+
+    }
+
+    public boolean isFull(){
+
+        for (Pair pair : map) {
+            if(pair == null) {
+                    return false;
+            }
+        }
+        return true;
+
+    }
 
    //returns the index of input value
-    public int findValue(String key) {
+    public int search(String key) {
 
         // Find the keys original hash key
         int asciiNumbers=0;
@@ -95,7 +110,6 @@ public class HashTable {
                 System.out.println(key + " was found in index "
 
                         + arrayIndexHash);
-
                 return arrayIndexHash;
 
             }
@@ -117,8 +131,8 @@ public class HashTable {
     }
 
 
-    public int  deleteValue(String key){
-        int deletedValueIndex= this.findValue(key);
+    public int  delete(String key){
+        int deletedValueIndex= this.search(key);
         if(deletedValueIndex!=-1){
             this.map[deletedValueIndex]= null;
             return  deletedValueIndex;
@@ -127,9 +141,4 @@ public class HashTable {
 
     }
 
-
-
-
 }
-
-

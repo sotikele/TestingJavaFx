@@ -13,9 +13,9 @@
    <children>
       <Pane fx:id="pane" prefHeight="375.0" prefWidth="750.0" style="-fx-background-color: #D3D3D3;" GridPane.columnIndex="1">
          <children>
-            <Button layoutX="19.0" layoutY="52.0" mnemonicParsing="false" onAction="#insertValues" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6495ED;" text="Insert" />
-            <Button layoutX="319.0" layoutY="2.0" mnemonicParsing="false" onAction="#deleteValues" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6495ED;" text="delete" />
-            <Button layoutX="532.0" layoutY="2.0" mnemonicParsing="false" onAction="#findValues" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6495ED;" text="find" />
+            <Button layoutX="19.0" layoutY="52.0" mnemonicParsing="false" onAction="#insertValue" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6495ED;" text="Insert" />
+            <Button layoutX="319.0" layoutY="2.0" mnemonicParsing="false" onAction="#deleteValue" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6495ED;" text="delete" />
+            <Button layoutX="532.0" layoutY="2.0" mnemonicParsing="false" onAction="#searchValue" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #6495ED;" text="search" />
             <TextField fx:id="insertKey" layoutY="2.0" prefHeight="25.0" prefWidth="107.0" />
             <TextField fx:id="deleteValue" layoutX="212.0" layoutY="2.0" prefHeight="25.0" prefWidth="107.0" />
             <TextField fx:id="findValue" layoutX="425.0" layoutY="2.0" prefHeight="25.0" prefWidth="107.0" />
