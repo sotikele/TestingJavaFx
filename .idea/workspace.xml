@@ -7,20 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/HashTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/LinearProbing.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TestingJavaFx/sample/Pair.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/hash-table-visualization/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hash-table-visualization/sample/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hash-table-visualization/sample/HashTable.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hash-table-visualization/sample/HashTable.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/hash-table-visualization/sample/LinearProbing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/hash-table-visualization/sample/LinearProbing.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/HashTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/HashTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/LinearProbing.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/LinearProbing.fxml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -253,6 +242,12 @@
       <workItem from="1600362853828" duration="272000" />
       <workItem from="1600409196553" duration="182000" />
       <workItem from="1600762989386" duration="52000" />
+      <workItem from="1600929969050" duration="158000" />
+      <workItem from="1601546156674" duration="153000" />
+      <workItem from="1602746750496" duration="36000" />
+      <workItem from="1603367450560" duration="7000" />
+      <workItem from="1604306497612" duration="11000" />
+      <workItem from="1604306524741" duration="5000" />
     </task>
     <task id="LOCAL-00001" summary="design test">
       <created>1527515150628</created>

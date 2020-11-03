@@ -31,8 +31,6 @@ public class Controller implements Initializable {
  @FXML
  private List<Text> textList;
 
-    @FXML
-    private List<Rectangle> rectangleList;
 
   @FXML
   private Pane pane;
@@ -45,7 +43,6 @@ public class Controller implements Initializable {
         table=new HashTable(15);
         tempIndex = -1;
         textList=new ArrayList<>(15);
-        rectangleList=new ArrayList<>(15);
         int squareLayoutX=-10, squareLayoutY=250;
 
         for (int i=0; i<15;i++){
@@ -105,7 +102,6 @@ public class Controller implements Initializable {
     public void searchValue(ActionEvent event){
 
         String key = this.findValue.getText();
-       // TODO  rectangleList.get(0).setFill(Color.GREEN);
 
          if(key.equals("")||table.search(key)==-1){
             Alert alert =new Alert(Alert.AlertType.INFORMATION);
@@ -156,7 +152,6 @@ public class Controller implements Initializable {
         stack.setLayoutY(layoutY);
         this.pane.getChildren().add(stack);
         textList.add(text);
-        rectangleList.add(agent);
     }
 
     public void showTheHashFunction(String key){
